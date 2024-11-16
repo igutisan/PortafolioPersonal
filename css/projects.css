@@ -1,0 +1,150 @@
+
+.wave{
+    width: 100%;
+    top: 2px;
+}
+
+.wave_bottom{
+   
+    transform: scaleY(-1);
+    top: -2;
+    position: sticky;
+}
+.projects{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+
+.projects-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 25px;
+}
+.project-description{
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 10px;
+  
+}
+.project .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.project .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+.project .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  
+}
+.project .front h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    background: rgba(0, 0, 0, .4);
+    text-align: center;
+}
+.izq{
+    justify-content: left;
+
+}
+.project .back{
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+.project .back .project-detail{
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+
+}
+.project .back .project-detail a{
+    color: #f3f3f3;
+}
+.project .back .project-detail h3{
+    font-size: 30px;
+    margin-top: 50px;
+    letter-spacing: 2px;
+ 
+}
+.project:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+.project:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+
+.project{
+    padding: 25px;
+    max-width: 500px;
+    margin: 25px;
+    position: relative;
+    width: 300px;
+    height: 350px;
+}
+
+.projects-body{
+    background-color: #5d619d;
+    color: white;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 950px){
+    
+   
+    .projects-title{
+      
+        font-size: 50px;
+        margin: 35px;
+    }
+    .project-description{
+       line-height: 1.3;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+   
+    .projects-grid{
+        display: grid;
+        grid-template-columns: auto  2px auto;
+        padding: 70px;
+        justify-content: center;
+        max-width: 980px;
+        margin: 0 auto;
+    }
+   
+    .line{
+        background-color: white;
+        
+    }
+    .project{
+        padding: 30px;
+    }
+    .izq{
+        margin: -60px;
+        margin-top: 10px;
+    }
+}

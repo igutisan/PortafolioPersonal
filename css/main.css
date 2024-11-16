@@ -1,0 +1,61 @@
+:root{
+    --theme-color:rgb(250, 238, 238);
+    --primary-color:#4c9773;
+    --secundary-color:#F7C331;
+    --text-color-inverse:white;
+    --text-color:black;
+    --navbar-shallow-color:#e5e5e5;
+    --menu-mobile-background-color:#3A4460;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    background: rgb(242, 229, 229);
+    overflow-y: scroll;
+    color: var(--text-color);
+    padding-top: 70px;
+}
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+nav {
+    background: rgb(250, 238, 238);
+    height: 80px;
+    position: relative;
+}
+.horizontal-padding{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.vertical-padding{
+    padding-top: 300px;
+    padding-bottom: 300px;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+section[id]{
+    scroll-margin-top: 70px;
+}
+@media (min-widht: 950px) {
+    .horizontal-padding{
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+    .vertical-padding{
+        padding-top: 70px;
+        padding-bottom: 70px;
+    
+    }
+}
